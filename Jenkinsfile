@@ -118,8 +118,8 @@ def get_branch_deployment_environment(String branch_type) {
 }
 
 def mvn(String goals) {
-    def mvnHome = tool "Maven-3.2.3"
-    def javaHome = tool "JDK1.8.0_102"
+    def mvnHome = tool "Maven-3.5.0"
+    def javaHome = tool "JDK1.8.0_60"
 
     withEnv(["JAVA_HOME=${javaHome}", "PATH+MAVEN=${mvnHome}/bin"]) {
         sh "mvn -B ${goals}"
